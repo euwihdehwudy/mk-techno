@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        إتمام الطلب | m/k-techno
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <style>
+
+        /* بيانات التحويل */
+
+        .payment-info {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f5f7fa;
+            border: 1px solid #dcdcdc;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .payment-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .cash-number {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            direction: ltr;
+        }
+
+        .payment-note {
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        m/k-techno
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="electronics.html">
+            الإلكترونيات
+        </a>
+
+        <a href="robots.html">
+            الروبوتات
+        </a>
+
+        <a href="offers.html">
+            العروض
+        </a>
+
+        <a href="about.html">
+            من نحن
+        </a>
+
+        <a href="contact.html">
+            تواصل معنا
+        </a>
+
+        <a href="cart.html">
+            السلة
+            (<span id="cartCount">0</span>)
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="checkout-page">
+
+
+    <h1>
+        إتمام الطلب
+    </h1>
+
+
+
+    <div class="checkout-box">
+
+
+        <!-- ================= المنتجات ================= -->
+
+        <h2>
+            المنتجات المطلوبة
+        </h2>
+
+
+        <div
+            class="order-products"
+            id="checkoutProducts">
+
+            <!-- المنتجات تظهر هنا تلقائيًا -->
+
+        </div>
+
+
+
+        <!-- ================= الإجمالي ================= -->
+
+        <div class="order-total">
+
+            الإجمالي:
+
+            <span id="checkoutTotal">
+                0
+            </span>
+
+            ج.م
+
+        </div>
+
+
+
+        <!-- ================= بيانات العميل ================= -->
+
+        <h2>
+            بيانات العميل
+        </h2>
+
+
+        <input
+            id="customerName"
+            type="text"
+            placeholder="الاسم بالكامل"
+            autocomplete="name"
+            required>
+
+
+        <input
+            id="customerPhone"
+            type="tel"
+            placeholder="رقم الهاتف"
+            autocomplete="tel"
+            required>
+
+
+        <input
+            id="customerEmail"
+            type="email"
+            placeholder="البريد الإلكتروني"
+            autocomplete="email">
+
+
+        <input
+            id="customerAddress"
+            type="text"
+            placeholder="العنوان بالتفصيل"
+            autocomplete="street-address"
+            required>
+
+
+
+        <!-- ================= الدفع ================= -->
+
+        <h2>
+            طريقة الدفع
+        </h2>
+
+
+        <select
+            id="paymentMethod"
+            onchange="showPaymentDetails()"
+            required>
+
+            <option value="">
+                اختر طريقة الدفع
+            </option>
+
+            <option value="الدفع عند الاستلام">
+                الدفع عند الاستلام
+            </option>
+
+            <option value="تحويل بنكي">
+                تحويل بنكي / Bank Transfer
+            </option>
+
+        </select>
+
+
+
+        <!-- ================= Vodafone Cash ================= -->
+
+        <div
+            id="vodafoneCash"
+            class="payment-info">
+
+
+            <h3>
+                التحويل عبر Vodafone Cash
+            </h3>
+
+
+            <p>
+                قم بتحويل قيمة الطلب إلى رقم Vodafone Cash التالي:
+            </p>
+
+
+            <div class="cash-number">
+                01017865201
+            </div>
+
+
+            <hr>
+
+
+            <h3 dir="ltr">
+                Vodafone Cash Transfer
+            </h3>
+
+
+            <p dir="ltr">
+                Transfer the total order amount to this Vodafone Cash number:
+            </p>
+
+
+            <div
+                class="cash-number"
+                dir="ltr">
+
+                01017865201
+
+            </div>
+
+
+            <p class="payment-note">
+
+                بعد التحويل، احتفظ بإيصال التحويل
+                وأرسل طلبك عبر واتساب.
+                سيتم مراجعة عملية الدفع قبل تأكيد الطلب.
+
+            </p>
+
+
+            <p
+                class="payment-note"
+                dir="ltr">
+
+                After making the transfer, keep your payment receipt
+                and send your order via WhatsApp.
+                The payment will be verified before the order is confirmed.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- ================= الملاحظات ================= -->
+
+        <h2>
+            ملاحظات على الطلب
+        </h2>
+
+
+        <textarea
+            id="orderNotes"
+            placeholder="مثال: أريد الاتصال بي قبل التوصيل أو أي ملاحظات أخرى">
+        </textarea>
+
+
+
+        <!-- ================= تأكيد ================= -->
+
+        <button
+            type="button"
+            class="submit-order"
+            onclick="submitOrder()">
+
+            تأكيد الطلب عبر واتساب
+
+        </button>
+
+
+    </div>
+
+</main>
+
+
+
+<footer>
+
+    © 2026
+
+    <strong>
+        m/k-techno
+    </strong>
+
+    — جميع الحقوق محفوظة
+
+</footer>
+
+
+
+<script>
+
+function showPaymentDetails() {
+
+    const paymentMethod =
+        document.getElementById("paymentMethod");
+
+    const vodafoneCash =
+        document.getElementById("vodafoneCash");
+
+
+    if (paymentMethod.value === "تحويل بنكي") {
+
+        vodafoneCash.style.display = "block";
+
+    } else {
+
+        vodafoneCash.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>
