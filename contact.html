@@ -3,193 +3,340 @@
 
 <head>
 
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-تواصل معنا | m/k-techno
-</title>
+    <meta charset="UTF-8">
 
-<link
-rel="stylesheet"
-href="style.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="تواصل مع متجر m/k-techno للإلكترونيات والروبوتات.">
+
+    <meta
+        name="theme-color"
+        content="#07111f">
+
+    <title>
+        تواصل معنا | m/k-techno
+    </title>
+
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="favicon.png">
+
+    <link
+        rel="shortcut icon"
+        type="image/png"
+        href="favicon.png">
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
 
+
 <body>
 
-<header>
 
-<div class="logo">
-m/k-techno
-</div>
+<!-- ================= HEADER ================= -->
 
-<nav>
+<header class="site-header">
 
-<a href="index.html">
-الرئيسية
-</a>
+    <div class="logo">
 
-<a href="electronics.html">
-الإلكترونيات
-</a>
+        <a href="index.html">
 
-<a href="robots.html">
-الروبوتات
-</a>
+            <span class="logo-icon">
+                M/K
+            </span>
 
-<a href="offers.html">
-العروض
-</a>
+            <span class="logo-text">
+                m/k-techno
+            </span>
 
-<a href="about.html">
-من نحن
-</a>
+        </a>
 
-<a href="contact.html">
-تواصل معنا
-</a>
+    </div>
 
-<a href="cart.html">
-🛒 السلة
-<span id="cartCount">0</span>
-</a>
 
-</nav>
+    <nav
+        class="main-nav"
+        aria-label="القائمة الرئيسية">
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="electronics.html">
+            🔧 الإلكترونيات
+        </a>
+
+        <a href="robots.html">
+            🤖 الروبوتات
+        </a>
+
+        <a href="offers.html">
+            🔥 العروض
+        </a>
+
+        <a href="about.html">
+            ℹ️ من نحن
+        </a>
+
+        <a
+            href="contact.html"
+            class="active">
+
+            📞 تواصل معنا
+
+        </a>
+
+        <a
+            href="cart.html"
+            class="cart-link">
+
+            🛒 السلة
+
+            <span
+                id="cartCount"
+                class="cart-count">
+
+                0
+
+            </span>
+
+        </a>
+
+    </nav>
 
 </header>
 
 
+
+<!-- ================= CONTACT ================= -->
+
 <main class="contact">
 
-<h1>
-📞 تواصل معنا
-</h1>
+
+    <div class="section-title">
+
+        <span>
+            m/k-techno
+        </span>
+
+        <h1>
+            📞 تواصل معنا
+        </h1>
+
+        <p>
+            لديك سؤال أو تريد الاستفسار عن أحد المنتجات؟
+            أرسل لنا رسالتك وسنتواصل معك.
+        </p>
+
+    </div>
 
 
-<form
-onsubmit="sendContact(event)">
-
-<input
-id="contactName"
-type="text"
-placeholder="الاسم بالكامل"
-required>
+    <form
+        onsubmit="sendContact(event)"
+        class="contact-form">
 
 
-<input
-id="contactPhone"
-type="tel"
-placeholder="رقم الهاتف"
-required>
+        <!-- الاسم -->
+
+        <label for="contactName">
+            الاسم بالكامل
+        </label>
+
+        <input
+            id="contactName"
+            type="text"
+            placeholder="اكتب اسمك بالكامل"
+            autocomplete="name"
+            required>
 
 
-<input
-id="contactEmail"
-type="email"
-placeholder="البريد الإلكتروني">
+        <!-- الهاتف -->
+
+        <label for="contactPhone">
+            رقم الهاتف
+        </label>
+
+        <input
+            id="contactPhone"
+            type="tel"
+            placeholder="اكتب رقم الهاتف"
+            autocomplete="tel"
+            required>
 
 
-<textarea
-id="contactMessage"
-placeholder="اكتب رسالتك هنا..."
-required>
-</textarea>
+        <!-- البريد -->
+
+        <label for="contactEmail">
+            البريد الإلكتروني
+        </label>
+
+        <input
+            id="contactEmail"
+            type="email"
+            placeholder="example@email.com"
+            autocomplete="email">
 
 
-<button type="submit">
+        <!-- الرسالة -->
 
-📱 إرسال عبر واتساب
+        <label for="contactMessage">
+            رسالتك
+        </label>
 
-</button>
+        <textarea
+            id="contactMessage"
+            placeholder="اكتب رسالتك هنا..."
+            required></textarea>
 
-</form>
+
+        <!-- إرسال -->
+
+        <button
+            type="submit"
+            class="submit-order">
+
+            📱 إرسال عبر واتساب
+
+        </button>
+
+    </form>
+
+
+    <!-- معلومات التواصل -->
+
+    <div class="quick-links">
+
+
+        <div class="quick-card">
+
+            <h2>
+                📱 واتساب
+            </h2>
+
+            <p>
+                يمكنك إرسال استفسارك مباشرة
+                عبر واتساب.
+            </p>
+
+            <a
+                href="https://wa.me/201017865201"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn">
+
+                افتح واتساب
+
+            </a>
+
+        </div>
+
+
+        <div class="quick-card">
+
+            <h2>
+                🛒 الطلبات
+            </h2>
+
+            <p>
+                يمكنك إضافة المنتجات إلى السلة
+                ثم إرسال طلبك بسهولة.
+            </p>
+
+            <a
+                href="cart.html"
+                class="btn">
+
+                الذهاب للسلة
+
+            </a>
+
+        </div>
+
+
+    </div>
 
 </main>
 
 
-<footer>
 
-© 2026
+<!-- ================= FOOTER ================= -->
 
-<strong>
-m/k-techno
-</strong>
+<footer class="site-footer">
 
-— جميع الحقوق محفوظة
+
+    <div class="footer-logo">
+        m/k-techno
+    </div>
+
+
+    <p>
+        متجر الإلكترونيات والروبوتات
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="electronics.html">
+            الإلكترونيات
+        </a>
+
+        <a href="robots.html">
+            الروبوتات
+        </a>
+
+        <a href="offers.html">
+            العروض
+        </a>
+
+        <a href="about.html">
+            من نحن
+        </a>
+
+        <a href="contact.html">
+            تواصل معنا
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026
+
+        <strong>
+            m/k-techno
+        </strong>
+
+        — جميع الحقوق محفوظة
+
+    </div>
 
 </footer>
 
 
+
+<!-- ================= CART JS ================= -->
+
 <script src="cart.js"></script>
 
-
-<script>
-
-function sendContact(event) {
-
-event.preventDefault();
-
-
-const name =
-document.getElementById(
-"contactName"
-).value.trim();
-
-
-const phone =
-document.getElementById(
-"contactPhone"
-).value.trim();
-
-
-const email =
-document.getElementById(
-"contactEmail"
-).value.trim();
-
-
-const message =
-document.getElementById(
-"contactMessage"
-).value.trim();
-
-
-const whatsappNumber =
-"201017865201";
-
-
-const text =
-
-`📩 *رسالة جديدة إلى m/k-techno*
-
-👤 الاسم:
-${name}
-
-📞 الهاتف:
-${phone}
-
-📧 البريد الإلكتروني:
-${email || "غير مذكور"}
-
-💬 الرسالة:
-${message}`;
-
-
-const url =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(text);
-
-
-window.open(
-url,
-"_blank"
-);
-
-}
-
-</script>
 
 </body>
 
