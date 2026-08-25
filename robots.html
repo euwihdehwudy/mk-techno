@@ -1,1147 +1,312 @@
-/* =========================================================
-   m/k-techno — Professional Tech Theme
-   Dark / Cyan / Electric Blue
-   Compatible with the existing pages and new index.html
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<head>
 
-html {
-    scroll-behavior: smooth;
-}
+<meta charset="UTF-8">
 
-body {
-    font-family: Arial, Tahoma, sans-serif;
-    direction: rtl;
-    background:
-        radial-gradient(circle at 10% 10%, rgba(34, 211, 238, 0.05), transparent 25%),
-        #050b14;
-    color: #e5f7ff;
-    line-height: 1.7;
-    min-height: 100vh;
-}
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-/* ================= HEADER ================= */
+<title>الروبوتات | m/k-techno</title>
 
-header,
-.site-header {
-    background: rgba(5, 11, 20, 0.92);
-    color: white;
-    min-height: 76px;
-    padding: 12px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(34, 211, 238, 0.18);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, .35);
-    backdrop-filter: blur(14px);
-}
+<link
+rel="stylesheet"
+href="style.css">
 
-/* ================= LOGO ================= */
+<style>
 
-.logo {
-    white-space: nowrap;
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-icon {
-    width: 42px;
-    height: 42px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    color: #03111b;
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    background: linear-gradient(135deg, #22d3ee, #2563eb);
-    box-shadow:
-        0 0 15px rgba(34, 211, 238, .45),
-        inset 0 0 8px rgba(255, 255, 255, .25);
-    transform: skew(-6deg);
-}
-
-.logo-text {
-    color: #22d3ee;
-    font-size: 27px;
-    font-weight: bold;
-    letter-spacing: .5px;
-    text-shadow: 0 0 18px rgba(34, 211, 238, .35);
-}
-
-/* ================= NAVIGATION ================= */
-
-nav,
-.main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #dbeafe;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 11px;
-    border-radius: 9px;
-    transition: .3s;
-}
-
-nav a:hover,
-nav a.active {
-    color: #22d3ee;
-    background: rgba(34, 211, 238, .08);
-    text-shadow: 0 0 12px rgba(34, 211, 238, .5);
-}
-
-.cart-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.cart-count {
-    min-width: 22px;
-    height: 22px;
-    padding: 0 6px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    background: #22d3ee;
-    color: #04111a;
-    font-size: 12px;
-    font-weight: 900;
-}
-
-/* ================= BUTTONS ================= */
-
-button,
-.btn {
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    background: linear-gradient(135deg, #22d3ee, #06b6d4);
-    color: #03111b;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 5px;
-    border: 1px solid rgba(255, 255, 255, .12);
-    box-shadow: 0 0 0 rgba(34, 211, 238, 0);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(34, 211, 238, .28);
-}
-
-.primary-btn {
-    background: linear-gradient(135deg, #22d3ee, #2563eb);
-    color: white;
-}
-
-.secondary-btn {
-    background: transparent;
-    color: #22d3ee;
-    border: 1px solid rgba(34, 211, 238, .6);
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    min-height: 620px;
-    padding: 80px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-
-    background:
-        radial-gradient(circle at 20% 20%,
-            rgba(34, 211, 238, .18),
-            transparent 28%),
-        radial-gradient(circle at 80% 75%,
-            rgba(37, 99, 235, .18),
-            transparent 30%),
-        linear-gradient(135deg, #030914, #07111f 55%, #050b14);
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: .14;
-    background-image:
-        linear-gradient(rgba(34, 211, 238, .18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 211, 238, .18) 1px, transparent 1px);
-    background-size: 45px 45px;
-    mask-image: linear-gradient(to bottom, black, transparent);
-    z-index: -2;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    border: 1px solid rgba(34, 211, 238, .18);
-    border-radius: 50%;
-    left: -120px;
-    bottom: -170px;
-    box-shadow:
-        0 0 0 40px rgba(34, 211, 238, .025),
-        0 0 0 80px rgba(34, 211, 238, .018);
-    z-index: -1;
-}
-
-.hero-content {
-    max-width: 850px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-badge {
-    display: inline-block;
-    margin-bottom: 18px;
-    padding: 7px 15px;
-    border: 1px solid rgba(34, 211, 238, .35);
-    border-radius: 50px;
-    color: #67e8f9;
-    background: rgba(34, 211, 238, .07);
-    box-shadow: 0 0 20px rgba(34, 211, 238, .08);
-    font-size: 14px;
-}
-
-.hero h1 {
-    font-size: clamp(38px, 6vw, 64px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-    font-weight: 900;
-}
-
-.hero h1 span {
-    color: #22d3ee;
-    text-shadow:
-        0 0 12px rgba(34, 211, 238, .4),
-        0 0 35px rgba(34, 211, 238, .18);
-}
-
-.hero p {
-    max-width: 800px;
-    margin: auto;
-    color: #c7e8f4;
-    font-size: 20px;
-}
-
-.hero-buttons {
-    margin-top: 28px;
-}
-
-.hero-tech {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    left: -120px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: .32;
-    pointer-events: none;
-}
-
-.tech-circle {
+.product-image {
     width: 100%;
-    height: 100%;
-    border: 1px solid rgba(34, 211, 238, .35);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow:
-        0 0 50px rgba(34, 211, 238, .08),
-        inset 0 0 40px rgba(34, 211, 238, .04);
-    animation: rotateTech 18s linear infinite;
-}
-
-.tech-circle span {
-    font-size: 70px;
-    color: #22d3ee;
-    text-shadow: 0 0 25px #22d3ee;
-}
-
-.tech-line {
-    position: absolute;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #22d3ee, transparent);
-}
-
-.line-1 {
-    width: 180px;
-    top: 25%;
-    right: -30px;
-}
-
-.line-2 {
-    width: 130px;
-    top: 55%;
-    right: -10px;
-}
-
-.line-3 {
-    width: 170px;
-    top: 76%;
-    right: -40px;
-}
-
-@keyframes rotateTech {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* ================= SECTION TITLES ================= */
-
-.section-title {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 35px;
-}
-
-.section-title > span {
-    color: #22d3ee;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.section-title h2 {
-    font-size: clamp(28px, 4vw, 42px);
-    margin: 7px 0;
-    color: #f4fbff;
-}
-
-.section-title p {
-    color: #8fb2c2;
-}
-
-/* ================= FEATURES ================= */
-
-.features-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 75px 20px;
-}
-
-.features {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
-}
-
-.features > div,
-.feature-card {
-    background:
-        linear-gradient(145deg,
-            rgba(13, 29, 45, .95),
-            rgba(6, 16, 27, .95));
-    color: #e5f7ff;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .12);
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, .25),
-        inset 0 1px rgba(255, 255, 255, .025);
-    transition: .3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.features > div::before,
-.feature-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55px;
-    height: 3px;
-    background: #22d3ee;
-    box-shadow: 0 0 18px #22d3ee;
-}
-
-.features > div:hover,
-.feature-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(34, 211, 238, .42);
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, .3),
-        0 0 25px rgba(34, 211, 238, .07);
-}
-
-.features span,
-.feature-icon {
-    display: block;
-    font-size: 45px;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 10px rgba(34, 211, 238, .22));
-}
-
-.feature-card h3,
-.features h3 {
-    color: #f4fbff;
-    margin-bottom: 8px;
-}
-
-.feature-card p,
-.features p {
-    color: #8fb2c2;
-}
-
-/* ================= QUICK LINKS ================= */
-
-.quick-links {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 20px 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.quick-card {
-    padding: 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .14);
-    background: linear-gradient(145deg, #0b1b2b, #07111d);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
-    text-align: center;
-    transition: .3s;
-}
-
-.quick-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(34, 211, 238, .45);
-}
-
-.quick-card h2 {
-    color: #22d3ee;
-    margin-bottom: 10px;
-}
-
-.quick-card p {
-    color: #9fb8c6;
-    margin-bottom: 15px;
-}
-
-/* ================= PRODUCTS ================= */
-
-.products-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 70px 20px;
-}
-
-.products-section > h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: #f4fbff;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-}
-
-.product {
-    background: linear-gradient(145deg, #0c1b2a, #07111c);
-    color: #e5f7ff;
-    padding: 20px;
-    border-radius: 18px;
-    text-align: center;
-    border: 1px solid rgba(34, 211, 238, .12);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
-    transition: .3s;
-}
-
-.product:hover {
-    transform: translateY(-8px);
-    border-color: rgba(34, 211, 238, .4);
-}
-
-.product-icon {
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #071c2a, #0d1830);
+    height: 220px;
+    object-fit: contain;
+    background: #f8fafc;
     border-radius: 15px;
-    font-size: 70px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(34, 211, 238, .1);
-}
-
-.product h2 {
-    font-size: 22px;
+    margin-bottom: 18px;
+    display: block;
 }
 
 .product p {
-    color: #8faebe;
-    margin: 10px 0;
-    min-height: 55px;
+    min-height: 75px;
 }
 
-.product strong {
-    display: block;
-    color: #22d3ee;
-    font-size: 23px;
-    margin: 15px 0;
+.product h2 {
+    margin-bottom: 8px;
 }
 
-.product button {
-    width: 100%;
-    border: none;
-    background: #101e2d;
-    color: white;
-    padding: 13px;
-    border-radius: 10px;
-    font-weight: bold;
-    border: 1px solid rgba(34, 211, 238, .18);
-}
+@media (max-width: 600px) {
 
-.product button:hover {
-    background: #22d3ee;
-    color: #07111f;
-}
-
-/* ================= OFFERS ================= */
-
-.offers {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.offers h1 {
-    font-size: 40px;
-    margin-bottom: 35px;
-    color: #f4fbff;
-}
-
-.offer-card {
-    background: linear-gradient(145deg, #0c1b2a, #07111c);
-    padding: 35px;
-    margin: 20px 0;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .14);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
-    transition: .3s;
-}
-
-.offer-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(34, 211, 238, .4);
-}
-
-.offer-card h2 {
-    color: #22d3ee;
-    margin-bottom: 10px;
-}
-
-/* ================= ABOUT ================= */
-
-.about {
-    max-width: 900px;
-    margin: auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.about h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #f4fbff;
-}
-
-.about p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #a7c1cd;
-}
-
-/* ================= CONTACT ================= */
-
-.contact {
-    max-width: 700px;
-    margin: auto;
-    padding: 70px 20px;
-}
-
-.contact h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 40px;
-    color: #f4fbff;
-}
-
-.contact form {
-    background: linear-gradient(145deg, #0c1b2a, #07111c);
-    padding: 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .14);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #1e3a4a;
-    background: #06111d;
-    color: #e5f7ff;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    font-family: inherit;
-    outline: none;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-    border-color: #22d3ee;
-    box-shadow: 0 0 0 3px rgba(34, 211, 238, .08);
-}
-
-.contact textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-
-.contact button {
-    width: 100%;
-    border: none;
-    background: #22d3ee;
-    color: #07111f;
-    padding: 14px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.contact button:hover {
-    box-shadow: 0 8px 25px rgba(34, 211, 238, .25);
-    transform: translateY(-2px);
-}
-
-/* ================= CART ================= */
-
-.cart-page {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 20px;
-}
-
-.cart-page h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 35px;
-    color: #f4fbff;
-}
-
-.cart-container {
-    background: linear-gradient(145deg, #0c1b2a, #07111c);
-    padding: 25px;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .14);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
-}
-
-.cart-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #173142;
-}
-
-.cart-info {
-    flex: 1;
-}
-
-.cart-price {
-    color: #22d3ee;
-    font-weight: bold;
-}
-
-.quantity {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.quantity button {
-    width: 34px;
-    height: 34px;
-    border: none;
-    border-radius: 7px;
-    background: #102333;
-    color: white;
-}
-
-.quantity button:hover {
-    background: #22d3ee;
-    color: #07111f;
-}
-
-.quantity span {
-    min-width: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.remove {
-    border: none;
-    background: #dc3545;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-}
-
-.cart-summary {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cart-total {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f4fbff;
-}
-
-.checkout-btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #22d3ee;
-    color: #07111f;
-    padding: 14px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-/* ================= CHECKOUT ================= */
-
-.checkout-page {
-    max-width: 850px;
-    margin: auto;
-    padding: 70px 20px;
-}
-
-.checkout-page h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 35px;
-    color: #f4fbff;
-}
-
-.checkout-box {
-    background: linear-gradient(145deg, #0c1b2a, #07111c);
-    padding: 30px;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 211, 238, .14);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
-}
-
-.checkout-box h2 {
-    margin: 25px 0 15px;
-    color: #22d3ee;
-}
-
-.checkout-box input,
-.checkout-box select,
-.checkout-box textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #1e3a4a;
-    background: #06111d;
-    color: #e5f7ff;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    font-family: inherit;
-    outline: none;
-}
-
-.checkout-box input:focus,
-.checkout-box select:focus,
-.checkout-box textarea:focus {
-    border-color: #22d3ee;
-    box-shadow: 0 0 0 3px rgba(34, 211, 238, .08);
-}
-
-.checkout-box textarea {
-    min-height: 110px;
-    resize: vertical;
-}
-
-.order-products {
-    background: #071521;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(34, 211, 238, .08);
-}
-
-.order-product {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #173142;
-}
-
-.order-total {
-    color: #22d3ee;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.submit-order {
-    width: 100%;
-    border: none;
-    background: #25d366;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.submit-order:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
-}
-
-/* ================= EMPTY CART ================= */
-
-.empty-cart {
-    text-align: center;
-    padding: 50px 20px;
-    color: #9fb8c6;
-}
-
-.empty-cart-icon {
-    font-size: 70px;
-}
-
-/* ================= FOOTER ================= */
-
-footer,
-.site-footer {
-    margin-top: 50px;
-    background:
-        linear-gradient(180deg, #07111d, #030811);
-    color: #b8d1dc;
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 1px solid rgba(34, 211, 238, .12);
-}
-
-.site-footer .footer-logo {
-    color: #22d3ee;
-    font-size: 28px;
-    font-weight: 900;
-    margin-bottom: 5px;
-    text-shadow: 0 0 15px rgba(34, 211, 238, .3);
-}
-
-.site-footer p {
-    color: #7894a2;
-    margin-bottom: 15px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin: 15px 0 20px;
-}
-
-.footer-links a {
-    color: #a8c8d5;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.footer-links a:hover {
-    color: #22d3ee;
-}
-
-footer strong {
-    color: #22d3ee;
-}
-
-.copyright {
-    color: #6f8995;
-    font-size: 14px;
-}
-
-/* ================= MESSAGE ================= */
-
-.cart-message {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #0b1a29;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(34, 211, 238, .25);
-    z-index: 9999;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
-}
-
-/* ================= SELECTION / SCROLLBAR ================= */
-
-::selection {
-    background: #22d3ee;
-    color: #04111a;
-}
-
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-::-webkit-scrollbar-track {
-    background: #030811;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #12374a;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #22d3ee;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 900px) {
-
-    header,
-    .site-header {
-        padding: 12px 20px;
+    .product-image {
+        height: 200px;
     }
 
-    nav,
-    .main-nav {
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    .quick-links {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-tech {
-        opacity: .15;
-        left: -170px;
-    }
 }
 
-@media (max-width: 800px) {
+</style>
 
-    header,
-    .site-header {
-        flex-direction: column;
-        padding: 14px 12px;
-    }
+</head>
 
-    .logo-text {
-        font-size: 24px;
-    }
 
-    nav,
-    .main-nav {
-        gap: 5px;
-        width: 100%;
-    }
+<body>
 
-    nav a {
-        font-size: 13px;
-        padding: 7px 8px;
-    }
 
-    .hero {
-        min-height: 560px;
-        padding: 65px 18px;
-    }
+<header>
 
-    .hero h1 {
-        font-size: 38px;
-    }
+<div class="logo">
+m/k-techno
+</div>
 
-    .hero p {
-        font-size: 17px;
-    }
 
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+<nav>
 
-    .hero-buttons .btn {
-        width: min(100%, 320px);
-        margin: 6px 0;
-    }
+<a href="index.html">
+الرئيسية
+</a>
 
-    .hero-tech {
-        width: 250px;
-        height: 250px;
-        left: -135px;
-        opacity: .1;
-    }
+<a href="electronics.html">
+الإلكترونيات
+</a>
 
-    .features-section {
-        padding: 55px 15px;
-    }
+<a href="robots.html">
+الروبوتات
+</a>
 
-    .features {
-        grid-template-columns: 1fr;
-    }
+<a href="offers.html">
+العروض
+</a>
 
-    .quick-links {
-        padding: 0 15px 60px;
-    }
+<a href="about.html">
+من نحن
+</a>
 
-    .products-section,
-    .offers,
-    .about,
-    .contact,
-    .cart-page,
-    .checkout-page {
-        padding: 55px 15px;
-    }
+<a href="contact.html">
+تواصل معنا
+</a>
 
-    .products-section > h1,
-    .offers h1,
-    .about h1,
-    .contact h1,
-    .cart-page h1,
-    .checkout-page h1 {
-        font-size: 32px;
-    }
+<a href="cart.html">
+السلة
+<span id="cartCount">0</span>
+</a>
 
-    .cart-row {
-        flex-direction: column;
-        text-align: center;
-    }
+</nav>
 
-    .quantity {
-        justify-content: center;
-    }
+</header>
 
-    .cart-summary {
-        flex-direction: column;
-    }
 
-    .checkout-btn {
-        width: 100%;
-        text-align: center;
-    }
 
-    .contact form,
-    .checkout-box,
-    .cart-container {
-        padding: 20px;
-    }
-}
+<main class="products-section">
 
-@media (max-width: 480px) {
 
-    .logo-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 11px;
-    }
+<h1>
+الروبوتات
+</h1>
 
-    .logo-text {
-        font-size: 21px;
-    }
 
-    nav a {
-        font-size: 12px;
-    }
+<div class="products">
 
-    .hero h1 {
-        font-size: 32px;
-    }
 
-    .hero p {
-        font-size: 16px;
-    }
 
-    .hero-badge {
-        font-size: 12px;
-    }
+<!-- روبوت تتبع المسار -->
 
-    .feature-card,
-    .features > div,
-    .quick-card {
-        padding: 25px 17px;
-    }
+<div class="product">
 
-    .footer-links {
-        gap: 10px;
-        font-size: 14px;
-    }
-}
+<img
+class="product-image"
+src="https://imgstorage1.blr1.digitaloceanspaces.com/projects/20260201_200053_51ef1d8e.webp"
+alt="روبوت تتبع المسار"
+loading="lazy">
 
-/* ================= ACCESSIBILITY ================= */
+<h2>
+روبوت تتبع المسار
+</h2>
 
-@media (prefers-reduced-motion: reduce) {
+<p>
+روبوت سيارة مزود بحساسات
+IR لتتبع المسار، ويمكن برمجته
+للتحرك على خط أو مسار محدد.
+</p>
 
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-    }
-}
+<strong>
+899 ج.م
+</strong>
+
+<button
+onclick="addToCart('روبوت تتبع المسار',899)">
+
+أضف إلى السلة
+
+</button>
+
+</div>
+
+
+
+<!-- عربة روبوت قابلة للبرمجة والتحكم -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://orjuwanalmotarafi.com/project2.png"
+alt="عربة روبوت قابلة للبرمجة والتحكم مزودة بحساس Ultrasonic"
+loading="lazy">
+
+<h2>
+عربة روبوت قابلة للبرمجة والتحكم
+</h2>
+
+<p>
+عربة روبوت قابلة للبرمجة والتحكم،
+مزودة بحساس
+<strong>Ultrasonic Sensor</strong>
+لاكتشاف العوائق وقياس المسافات.
+</p>
+
+<strong>
+1,299 ج.م
+</strong>
+
+<button
+onclick="addToCart('عربة روبوت قابلة للبرمجة والتحكم',1299)">
+
+أضف إلى السلة
+
+</button>
+
+</div>
+
+
+
+<!-- روبوت تجنب العوائق -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://tscinbuny.com/cdn/shop/files/arduinorobotkit_ZYC0043_3.jpg?v=1723878831&width=1946"
+alt="روبوت تجنب العوائق"
+loading="lazy">
+
+<h2>
+روبوت تجنب العوائق
+</h2>
+
+<p>
+روبوت يستخدم حساس
+Ultrasonic Sensor لاكتشاف
+العوائق وتغيير اتجاه الحركة
+بشكل تلقائي.
+</p>
+
+<strong>
+1,099 ج.م
+</strong>
+
+<button
+onclick="addToCart('روبوت تجنب العوائق',1099)">
+
+أضف إلى السلة
+
+</button>
+
+</div>
+
+
+
+<!-- Robot Car Kit -->
+
+<div class="product">
+
+<img
+    class="product-image"
+    src="https://www.theengineerstore.in/cdn/shop/files/Multi-Functional-4WD-Robot-Car-Chassis-Kit-with-ARDUINO-UNO-R3robu-3.jpg?v=1699525954"
+    alt="مجموعة مكونات لبناء عربة روبوت"
+    loading="lazy">
+
+<h2>
+Robot Car Kit
+</h2>
+
+<p>
+مجموعة مكونات لبناء
+عربة روبوت بنفسك،
+ومناسبة للمشروعات التعليمية
+والتجارب الإلكترونية.
+</p>
+
+<strong>
+799 ج.م
+</strong>
+
+<button
+onclick="addToCart('Robot Car Kit',799)">
+
+أضف إلى السلة
+
+</button>
+
+</div>
+
+
+
+<!-- Bluetooth Robot Car -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://osoyoo.com/picture/Arduino_Sport_Car/lesson1/6.jpg"
+alt="Bluetooth Robot Car"
+loading="lazy">
+
+<h2>
+Bluetooth Robot Car
+</h2>
+
+<p>
+عربة روبوت يمكن التحكم
+بها من الهاتف باستخدام
+تقنية Bluetooth وHC-05.
+</p>
+
+<strong>
+999 ج.م
+</strong>
+
+<button
+onclick="addToCart('Bluetooth Robot Car',999)">
+
+أضف إلى السلة
+
+</button>
+
+</div>
+
+
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+© 2026
+
+<strong>
+m/k-techno
+</strong>
+
+— جميع الحقوق محفوظة
+
+</footer>
+
+
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>
