@@ -19,39 +19,182 @@
 
     <style>
 
-        /* بيانات التحويل */
+        /* =========================
+           بيانات التحويل
+           ========================= */
 
         .payment-info {
             display: none;
-            margin-top: 15px;
-            padding: 20px;
-            border-radius: 15px;
-            background: #f5f7fa;
-            border: 1px solid #dcdcdc;
+
+            margin-top: 20px;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0c1b2a,
+                    #07111c
+                );
+
+            border:
+                1px solid rgba(34, 211, 238, .25);
+
             text-align: center;
-            line-height: 1.8;
+
+            line-height: 1.9;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, .25);
+
+            animation: paymentShow .3s ease;
         }
+
+
+        @keyframes paymentShow {
+
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
 
         .payment-info h3 {
+
             margin-top: 0;
-            margin-bottom: 10px;
+
+            margin-bottom: 12px;
+
+            color: #22d3ee;
+
+            font-size: 22px;
+
         }
+
+
+        .payment-info p {
+
+            color: #b9d4df;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* رقم التحويل */
 
         .cash-number {
+
             display: inline-block;
-            margin: 10px 0;
-            padding: 10px 20px;
-            border-radius: 10px;
-            background: white;
+
+            margin: 12px 0;
+
+            padding: 12px 25px;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+
+            color: #07111c;
+
             font-size: 24px;
+
             font-weight: bold;
+
             letter-spacing: 2px;
+
             direction: ltr;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, .2);
+
         }
 
+
+        /* عنوان البنك */
+
+        .bank-name {
+
+            margin: 15px 0;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(34, 211, 238, .07);
+
+            border:
+                1px solid rgba(34, 211, 238, .15);
+
+        }
+
+
+        .bank-name strong {
+
+            display: block;
+
+            color: #22d3ee;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* الملاحظة */
+
         .payment-note {
+
+            margin-top: 15px;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            background:
+                rgba(255, 193, 7, .06);
+
+            border:
+                1px solid rgba(255, 193, 7, .15);
+
+            color: #d9e6eb;
+
             font-size: 14px;
-            margin-top: 12px;
+
+        }
+
+
+        .payment-warning {
+
+            margin-top: 15px;
+
+            color: #67e8f9;
+
+            font-size: 14px;
+
+        }
+
+
+        .payment-divider {
+
+            border: 0;
+
+            border-top:
+                1px solid rgba(34, 211, 238, .12);
+
+            margin: 22px 0;
+
         }
 
     </style>
@@ -96,7 +239,7 @@
         </a>
 
         <a href="cart.html">
-            السلة
+            🛒 السلة
             (<span id="cartCount">0</span>)
         </a>
 
@@ -207,18 +350,44 @@
             </option>
 
             <option value="الدفع عند الاستلام">
-                الدفع عند الاستلام
+                💵 الدفع عند الاستلام
             </option>
 
-            <option value="تحويل بنكي">
-                تحويل بنكي / Bank Transfer
+
+
+            <option value="Vodafone Cash">
+                📱 Vodafone Cash
             </option>
 
         </select>
 
 
+ 
 
-        <!-- ================= Vodafone Cash ================= -->
+        <div
+            id="bankTransfer"
+            class="payment-info">
+
+
+
+
+
+            <p class="payment-note" dir="ltr">
+
+                After completing the bank transfer,
+                keep your payment receipt and send
+                your order via WhatsApp.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             Vodafone Cash
+             ================================================= -->
 
         <div
             id="vodafoneCash"
@@ -226,7 +395,7 @@
 
 
             <h3>
-                التحويل عبر Vodafone Cash
+                📱 التحويل عبر Vodafone Cash
             </h3>
 
 
@@ -240,7 +409,7 @@
             </div>
 
 
-            <hr>
+            <hr class="payment-divider">
 
 
             <h3 dir="ltr">
@@ -249,7 +418,10 @@
 
 
             <p dir="ltr">
-                Transfer the total order amount to this Vodafone Cash number:
+
+                Transfer the total order amount
+                to this Vodafone Cash number:
+
             </p>
 
 
@@ -271,17 +443,6 @@
             </p>
 
 
-            <p
-                class="payment-note"
-                dir="ltr">
-
-                After making the transfer, keep your payment receipt
-                and send your order via WhatsApp.
-                The payment will be verified before the order is confirmed.
-
-            </p>
-
-
         </div>
 
 
@@ -295,8 +456,7 @@
 
         <textarea
             id="orderNotes"
-            placeholder="مثال: أريد الاتصال بي قبل التوصيل أو أي ملاحظات أخرى">
-        </textarea>
+            placeholder="مثال: أريد الاتصال بي قبل التوصيل أو أي ملاحظات أخرى"></textarea>
 
 
 
@@ -307,7 +467,7 @@
             class="submit-order"
             onclick="submitOrder()">
 
-            تأكيد الطلب عبر واتساب
+            📱 تأكيد الطلب عبر واتساب
 
         </button>
 
@@ -339,17 +499,34 @@ function showPaymentDetails() {
     const paymentMethod =
         document.getElementById("paymentMethod");
 
+    const bankTransfer =
+        document.getElementById("bankTransfer");
+
     const vodafoneCash =
         document.getElementById("vodafoneCash");
 
 
+    /* إخفاء الاثنين أولاً */
+
+    bankTransfer.style.display = "none";
+
+    vodafoneCash.style.display = "none";
+
+
+    /* التحويل البنكي */
+
     if (paymentMethod.value === "تحويل بنكي") {
 
+        bankTransfer.style.display = "block";
+
+    }
+
+
+    /* Vodafone Cash */
+
+    else if (paymentMethod.value === "Vodafone Cash") {
+
         vodafoneCash.style.display = "block";
-
-    } else {
-
-        vodafoneCash.style.display = "none";
 
     }
 
